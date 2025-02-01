@@ -32,6 +32,29 @@ justification of architectural choices, and any additional insights.
 - Included inline comments and markdown explanations for clarity.
 - Provided references for any pre-trained models or external resources used.
 
+## Model Used: Transformer-based Architecture (T5 or BART)
+
+In your code, you can justify the use of a transformer-based model like T5 (Text-to-Text Transfer Transformer) or BART (Bidirectional and Auto-Regressive Transformers) because they are powerful models designed for text-to-text generation tasks, like dialect conversion. These models are well-suited for sequence-to-sequence tasks, where the goal is to map input text (UK English) to output text (US English).
+
+### Model Selection & Justification
+For this project, I used T5 (Text-to-Text Transfer Transformer), a state-of-the-art transformer model, due to its efficiency in handling text-to-text tasks. Since dialect conversion is a form of text transformation, T5 was chosen for its ability to map UK English text to US English text.
+
+#### Why T5?
+
+T5 converts any text-related task into a text-to-text problem. In this case, UK-to-US dialect conversion is treated as a transformation of one form of text to another.
+T5 excels at handling a variety of NLP tasks like translation, summarization, and text generation, making it a suitable candidate for the dialect conversion task.
+
+#### Training the Model:
+
+The UK and US text pairs were tokenized, and the model was fine-tuned on this dataset.
+The T5 model was chosen as it allows for an end-to-end solution in a transformer framework, which is ideal for sequence-to-sequence problems like this one.
+
+#### Why Transformer Models?
+
+Transformer models are known for their efficiency in handling long-range dependencies in text and providing excellent performance on tasks like machine translation and text transformation.
+The attention mechanism in transformers allows the model to focus on important parts of the input sequence, making it particularly effective for tasks where specific words or phrases need to be converted (like spelling and grammatical differences between UK and US English).
+
+
 ## Key Findings
 
 - The model successfully converted UK text to US text with high accuracy.
